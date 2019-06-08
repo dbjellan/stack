@@ -128,7 +128,7 @@ resource "aws_security_group" "main" {
     from_port   = "${var.port}"
     to_port     = "${var.port}"
     protocol    = "TCP"
-    cidr_blocks = ["${var.ingress_allow_cidr_blocks}"]
+    cidr_blocks = "${var.ingress_allow_cidr_blocks}"
   }
 
   egress {
