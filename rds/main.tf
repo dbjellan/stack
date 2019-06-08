@@ -121,10 +121,10 @@ resource "aws_security_group" "main" {
     from_port       = "${var.port}"
     to_port         = "${var.port}"
     protocol        = "TCP"
-    security_groups = ["${var.ingress_allow_security_groups}"]
+    security_groups = "${var.ingress_allow_security_groups}"
   }
 
-  ingress {
+  ingress { 
     from_port   = "${var.port}"
     to_port     = "${var.port}"
     protocol    = "TCP"
