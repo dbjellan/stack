@@ -188,3 +188,7 @@ output "url" {
 output "endpoint" {
   value = "${aws_db_instance.main.endpoint}"
 }
+
+output "host" {
+  value = "${aws_db_instance.main.host}"
+}
